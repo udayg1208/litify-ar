@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roomy AR - Poster Preview</title>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <title>ROOMY AI - AR Poster Preview</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@1.7.2/aframe/build/aframe-ar.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+    </style>
 </head>
 <body>
-    <a-scene embedded arjs>
-        <!-- Camera Reset: Keeping original position but fixing zoom -->
-        <a-entity camera position="0 1.6 5"></a-entity>
+    <a-scene embedded arjs="sourceType: webcam;">
+        
+        <!-- Poster -->
+        <a-entity position="0 1.5 -2">
+            <a-plane src="poster.jpg" rotation="0 0 0" width="2" height="3"></a-plane>
+        </a-entity>
 
-        <!-- Poster Image -->
-        <a-image src="poster.jpg" position="0 1 -2" width="2" height="3"></a-image>
+        <!-- Camera -->
+        <a-camera position="0 1.6 0"></a-camera>
+
     </a-scene>
 </body>
 </html>
