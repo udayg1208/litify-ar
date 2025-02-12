@@ -8,14 +8,11 @@
 </head>
 <body>
     <a-scene embedded arjs>
-        <!-- Camera with adjusted position and wider FOV -->
-        <a-entity camera position="0 1.6 3" fov="80"></a-entity>
+        <!-- Camera Reset: Keeping original position but fixing zoom -->
+        <a-entity camera position="0 1.6 5"></a-entity>
 
         <!-- Poster Image -->
-        <a-image src="poster.jpg" position="0 1 -2" width="1" height="1"></a-image>
-
-        <!-- Lighting for better visibility -->
-        <a-light type="directional" position="1 1 1" intensity="1"></a-light>
+        <a-image src="poster.jpg" position="0 1 -2" width="2" height="3"></a-image>
     </a-scene>
 </body>
 </html>
