@@ -9,10 +9,12 @@
 </head>
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-        <a-entity camera></a-entity>
+        <!-- Fix camera zoom issue -->
+        <a-entity camera position="0 1.6 3"></a-entity>
 
-        <!-- Try making the poster BIGGER and moving it further away -->
-        <a-image src="poster.jpg" position="0 1 -3" width="3" height="4"></a-image>
+        <!-- Poster: Increased size & moved forward -->
+        <a-image src="poster.jpg" position="0 1 -4" width="3" height="4"></a-image>
     </a-scene>
 </body>
 </html>
+
