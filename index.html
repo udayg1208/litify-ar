@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROOMY AI - AR Preview</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js" defer></script>
+    <title>ROOMY AI - AR Poster Preview</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ar.js@1.7.2/aframe/build/aframe-ar.min.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+    </style>
 </head>
 <body>
-    <button id="startAR">Start AR</button>
+    <a-scene embedded arjs="sourceType: webcam;">
+        
+        <!-- Poster -->
+        <a-entity position="0 1.5 -2">
+            <a-plane src="poster.jpg" rotation="0 0 0" width="2" height="3"></a-plane>
+        </a-entity>
+
+        <!-- Camera -->
+        <a-camera position="0 1.6 0"></a-camera>
+
+    </a-scene>
 </body>
 </html>
